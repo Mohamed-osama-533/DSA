@@ -97,7 +97,7 @@ The folder already contains the `.exe` file along with all required files and de
 | Field | Details |
 |-------|---------|
 | **Tools used** | ChatGPT, |
-| **Used for** | Generating initial `Node` struct skeleton; drafting method comments; README structure; debugging pointer issues |
+| **Used for** | generating test cases; making a comments in code;  helping in README structure |
 | **What was modified** | Sorting comparator logic was rewritten to handle the Egyptian phone number validation rules, which the AI was unaware of |
 | **What was rejected** | AI suggested an array-based storage approach — rejected and replaced with a singly linked list to meet the assignment specification |
 
