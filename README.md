@@ -1,5 +1,3 @@
-# DSA
-
 # Contact Manager System
 
 > A C++ console-based phonebook application built on a custom singly linked list, supporting full CRUD operations, multi-field search, merge sort, and strict input validation.
@@ -105,6 +103,11 @@ ContactManager.exe
 
 ```bash
 g++ -std=c++11 -Wall -Wextra -o ContactManager Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
+```
+
+
+
+```
 
 ---
 
