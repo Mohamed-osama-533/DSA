@@ -105,40 +105,6 @@ ContactManager.exe
 
 ```bash
 g++ -std=c++11 -Wall -Wextra -o ContactManager Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
-```
-
-### Using an IDE
-
-| IDE | Steps |
-|-----|-------|
-| **VS Code** | Add all `.cpp` files to a `tasks.json` build task or use the C/C++ extension |
-| **CLion** | Open the folder; add all `.cpp` files to `CMakeLists.txt` under `add_executable` |
-| **Code::Blocks** | Create a new Console project and add all `.cpp` / `.h` files to the project |
-| **Dev-C++** | Add all files to a new project and press F9 to build and run |
-
-### Quick usage example (in `main.cpp`)
-
-```cpp
-#include "ContactManagerClass.h"
-
-int main() {
-    ContactManager cm;
-
-    Contact c1("Ahmed Ali", "01012345678", "ahmed@gmail.com");
-    cm.store_contact(c1);
-
-    cm.display_all_contacts();
-
-    cm.sort_by_name();
-    cm.display_all_contacts();
-
-    auto results = cm.filter_by_substr("Ah");
-    for (auto& c : results)
-        std::cout << c.get_contact_name() << std::endl;
-
-    return 0;
-}
-```
 
 ---
 
