@@ -74,7 +74,17 @@ ContactManager/
 ├── ContactManager.cpp      # ContactManager implementation (CRUD + display)
 └── main.cpp                # Entry point (add your driver code here)
 ```
+## How to Run the Project
 
+This project includes a GUI built using Qt.
+
+A ready-to-use executable version is provided inside the `Exe` folder.  
+The folder already contains the `.exe` file along with all required files and dependencies needed to run the application.
+
+### Steps
+1. Open the `Exe` folder.
+2. Run the `.exe` file.
+3. The application will start directly without requiring any additional setup.
 ---
 
 
