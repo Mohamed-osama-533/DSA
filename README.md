@@ -77,39 +77,8 @@ ContactManager/
 
 ---
 
-## How to Compile and Run
-
-### Requirements
-- A C++11 (or later) compiler: **g++**, **clang++**, or **MSVC**
-- A terminal / command prompt
-
-### Compile (g++)
-
-```bash
-g++ -std=c++11 -o ContactManager Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
-```
-
-### Run
-
-```bash
-# Linux / macOS
-./ContactManager
-
-# Windows
-ContactManager.exe
-```
-
-### Compile with warnings (recommended during development)
-
-```bash
-g++ -std=c++11 -Wall -Wextra -o ContactManager Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
-```
 
 
-
-```
-
----
 
 ##  AI Usage Declaration
 
@@ -117,7 +86,7 @@ g++ -std=c++11 -Wall -Wextra -o ContactManager Contact.cpp LinkedList.cpp Contac
 
 | Field | Details |
 |-------|---------|
-| **Tools used** | ChatGPT, GitHub Copilot |
+| **Tools used** | ChatGPT, |
 | **Used for** | Generating initial `Node` struct skeleton; drafting method comments; README structure; debugging pointer issues |
 | **What was modified** | Sorting comparator logic was rewritten to handle the Egyptian phone number validation rules, which the AI was unaware of |
 | **What was rejected** | AI suggested an array-based storage approach — rejected and replaced with a singly linked list to meet the assignment specification |
