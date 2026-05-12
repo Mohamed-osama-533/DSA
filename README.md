@@ -1,23 +1,22 @@
-# Contact Manager System
+# 📒 Contact Manager System
 
 > A C++ console-based phonebook application built on a custom singly linked list, supporting full CRUD operations, multi-field search, merge sort, and strict input validation.
 
 ---
 
-## Group Members
+## 👥 Group Members
 
 | Name | Student ID |
 |------|------------|
 | Omar Wael Mahmoud Mahmoud | 2300109 |
 | Hassan Ebrahim Mohamed | 2300166 |
 | Mohamed Osama Fathy Farag | 2300533 |
-| Mohammed Zaki Abdelazim Elsayed  | 2300465 |
+| Mohammed Zaki Abdelazim Elsayed | 2300465 |
 | Ahmed Sameh Mohamed Hassouna | 2300082 |
-
 
 ---
 
-## Project Description
+## 📄 Project Description
 
 The Contact Manager System is a C++ application that simulates a phonebook. Each contact stores a name, phone number, email, and an auto-assigned unique ID. All contacts are held in a custom-built singly linked list — no STL containers are used for storage.
 
@@ -25,7 +24,7 @@ The system enforces real-world Egyptian phone number formats (010 / 011 / 012 / 
 
 ---
 
-## Data Structures Used & Why
+## 🗂️ Data Structures Used & Why
 
 ### Singly Linked List (`LinkedList`)
 
@@ -40,7 +39,99 @@ An array or `std::vector` was deliberately avoided to satisfy the assignment req
 
 ---
 
-##  Implemented Features
+## 🗃️ Project Structure
+
+```
+ContactManager/
+├── Exe/                        # Ready-to-run Windows executable + all required Qt DLLs
+│   └── ContactManager.exe
+├── ContactClass.h              # Contact class declaration
+├── Contact.cpp                 # Contact implementation (getters, setters, validation)
+├── LinkedList.h                # LinkedList + Node class declaration
+├── LinkedList.cpp              # LinkedList implementation (insert, erase, sort, search, filter)
+├── ContactManagerClass.h       # ContactManager class declaration
+├── ContactManager.cpp          # ContactManager implementation (CRUD + display)
+└── main.cpp                    # Entry point / Qt application bootstrap
+```
+
+---
+
+## ▶️ How to Run the Project
+
+There are two ways to run this project: using the pre-built executable, or compiling from source.
+
+---
+
+### ✅ Option 1 — Run the Pre-Built Executable (Easiest)
+
+A ready-to-use Windows executable is provided inside the `Exe` folder.  
+It includes the `.exe` file and all required Qt DLLs — no installation needed.
+
+**Steps:**
+1. Open the `Exe` folder.
+2. Double-click `ContactManager.exe`.
+3. The application launches immediately — no setup required.
+
+> ⚠️ Keep all files inside the `Exe` folder together. Moving only the `.exe` out of the folder will cause it to fail because it won't find the Qt libraries.
+
+---
+
+### 🔧 Option 2 — Compile from Source
+
+#### Requirements
+
+| Tool | Where to get it |
+|------|----------------|
+| Qt Framework (Qt 5 or Qt 6) | https://www.qt.io/download |
+| Qt Creator IDE | Included with Qt installer |
+| MinGW or MSVC compiler | Included with Qt installer |
+
+#### Steps using Qt Creator
+
+1. **Clone or download** this repository and unzip it.
+2. **Open Qt Creator**.
+3. Click **File → Open File or Project**.
+4. Navigate to the project folder and open the `.pro` file (e.g. `ContactManager.pro`).
+5. Qt Creator will configure the project automatically — click **Configure Project** if prompted.
+6. Click the green **▶ Run** button (or press `Ctrl + R`) to build and run.
+
+#### Steps using the command line (Qt + MinGW)
+
+Open a terminal with Qt in your PATH (use the **Qt MinGW terminal** from the Start menu on Windows):
+
+```bash
+# 1. Navigate to the project folder
+cd path/to/ContactManager
+
+# 2. Generate the Makefile from the .pro file
+qmake ContactManager.pro
+
+# 3. Build the project
+mingw32-make        # Windows
+# or
+make                # Linux / macOS
+
+# 4. Run the executable
+./ContactManager         # Linux / macOS
+ContactManager.exe       # Windows (inside the release/ or debug/ subfolder)
+```
+
+#### Compile without Qt (console-only version)
+
+If you only want to test the core C++ logic without the GUI, use `g++` directly:
+
+```bash
+g++ -std=c++11 -Wall -o ContactManager \
+    Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
+
+# Run
+./ContactManager        # Linux / macOS
+ContactManager.exe      # Windows
+```
+
+---
+
+## ✅ Implemented Features
 
 | # | Feature | Description |
 |---|---------|-------------|
@@ -62,43 +153,15 @@ An array or `std::vector` was deliberately avoided to satisfy the assignment req
 
 ---
 
-## Project Structure
-
-```
-ContactManager/
-├── ContactClass.h          # Contact class declaration
-├── Contact.cpp             # Contact implementation (getters, setters, validation)
-├── LinkedList.h            # LinkedList + Node class declaration
-├── LinkedList.cpp          # LinkedList implementation (insert, erase, sort, search, filter)
-├── ContactManagerClass.h   # ContactManager class declaration
-├── ContactManager.cpp      # ContactManager implementation (CRUD + display)
-└── main.cpp                # Entry point (add your driver code here)
-```
-## How to Run the Project
-
-This project includes a GUI built using Qt.
-
-A ready-to-use executable version is provided inside the `Exe` folder.  
-The folder already contains the `.exe` file along with all required files and dependencies needed to run the application.
-
-### Steps
-1. Open the `Exe` folder.
-2. Run the `.exe` file.
-3. The application will start directly without requiring any additional setup.
----
-
-
-
-
-##  AI Usage Declaration
+## 🤖 AI Usage Declaration
 
 > Transparency note: Using AI tools did not reduce any marks — this section is included as required.
 
 | Field | Details |
 |-------|---------|
-| **Tools used** | ChatGPT, |
-| **Used for** | generating test cases; making a comments in code;  helping in README structure |
-| **What was modified** | Sorting comparator logic was rewritten to handle the Egyptian phone number validation rules, which the AI was unaware of |
+| **Tools used** | ChatGPT |
+| **Used for** | Generating test cases; adding code comments; helping structure the README |
+| **What was modified** | Sorting comparator logic was rewritten to handle Egyptian phone number validation rules, which the AI was unaware of |
 | **What was rejected** | AI suggested an array-based storage approach — rejected and replaced with a singly linked list to meet the assignment specification |
 
 ### Example where AI output was incorrect
@@ -115,7 +178,7 @@ When asked to implement merge sort on the linked list, the AI generated a versio
 
 ---
 
-##  Notes
+## 📌 Notes
 
 - Contact IDs are assigned automatically and **cannot be changed** after creation (`const int contact_id`).
 - Phone numbers must be exactly 11 digits and start with `010`, `011`, `012`, or `015`.
