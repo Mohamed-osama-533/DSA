@@ -76,22 +76,14 @@ It includes the `.exe` file and all required Qt DLLs — no installation needed.
 
 ###  Option 2 — Compile from Source
 
-#### Requirements
-
-| Tool | Where to get it |
-|------|----------------|
-| Qt Framework (Qt 5 or Qt 6) | https://www.qt.io/download |
-| Qt Creator IDE | Included with Qt installer |
-| MinGW or MSVC compiler | Included with Qt installer |
 
 #### Steps using Qt Creator
-
-1. **Clone or download** this repository and unzip it.
-2. **Open Qt Creator**.
-3. Click **File → Open File or Project**.
-4. Navigate to the project folder and open the `.pro` file (e.g. `ContactManager.pro`).
-5. Qt Creator will configure the project automatically — click **Configure Project** if prompted.
-6. Click the green **▶ Run** button (or press `Ctrl + R`) to build and run.
+ 
+1. **Open Qt Creator**.
+2. Click **File → Open File or Project**.
+3. Navigate to the project folder and open the `.pro` file (e.g. `ContactManager.pro`).
+4. Qt Creator will configure the project automatically — click **Configure Project** if prompted.
+5. Click the Run button to build and run.
 
 #### Steps using the command line (Qt + MinGW)
 
@@ -110,8 +102,7 @@ mingw32-make        # Windows
 make                # Linux / macOS
 
 # 4. Run the executable
-./ContactManager         # Linux / macOS
-ContactManager.exe       # Windows (inside the release/ or debug/ subfolder)
+ContactManager.exe     
 ```
 
 #### Compile without Qt (console-only version)
@@ -123,8 +114,7 @@ g++ -std=c++11 -Wall -o ContactManager \
     Contact.cpp LinkedList.cpp ContactManager.cpp main.cpp
 
 # Run
-./ContactManager        # Linux / macOS
-ContactManager.exe      # Windows
+ContactManager.exe     
 ```
 
 ---
