@@ -1,10 +1,10 @@
-# 📒 Contact Manager System
+# Contact Manager System
 
 > A C++ console-based phonebook application built on a custom singly linked list, supporting full CRUD operations, multi-field search, merge sort, and strict input validation.
 
 ---
 
-## 👥 Group Members
+##  Group Members
 
 | Name | Student ID |
 |------|------------|
@@ -16,7 +16,7 @@
 
 ---
 
-## 📄 Project Description
+##  Project Description
 
 The Contact Manager System is a C++ application that simulates a phonebook. Each contact stores a name, phone number, email, and an auto-assigned unique ID. All contacts are held in a custom-built singly linked list — no STL containers are used for storage.
 
@@ -24,7 +24,7 @@ The system enforces real-world Egyptian phone number formats (010 / 011 / 012 / 
 
 ---
 
-## 🗂️ Data Structures Used & Why
+## Data Structures Used & Why
 
 ### Singly Linked List (`LinkedList`)
 
@@ -39,7 +39,7 @@ An array or `std::vector` was deliberately avoided to satisfy the assignment req
 
 ---
 
-## 🗃️ Project Structure
+##  Project Structure
 
 ```
 ContactManager/
@@ -56,13 +56,13 @@ ContactManager/
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
 There are two ways to run this project: using the pre-built executable, or compiling from source.
 
 ---
 
-### ✅ Option 1 — Run the Pre-Built Executable (Easiest)
+### Option 1 — Run the Pre-Built Executable (Easiest)
 
 A ready-to-use Windows executable is provided inside the `Exe` folder.  
 It includes the `.exe` file and all required Qt DLLs — no installation needed.
@@ -72,11 +72,11 @@ It includes the `.exe` file and all required Qt DLLs — no installation needed.
 2. Double-click `ContactManager.exe`.
 3. The application launches immediately — no setup required.
 
-> ⚠️ Keep all files inside the `Exe` folder together. Moving only the `.exe` out of the folder will cause it to fail because it won't find the Qt libraries.
+>  Keep all files inside the `Exe` folder together. Moving only the `.exe` out of the folder will cause it to fail because it won't find the Qt libraries.
 
 ---
 
-### 🔧 Option 2 — Compile from Source
+###  Option 2 — Compile from Source
 
 #### Requirements
 
@@ -131,7 +131,7 @@ ContactManager.exe      # Windows
 
 ---
 
-## ✅ Implemented Features
+##  Implemented Features
 
 | # | Feature | Description |
 |---|---------|-------------|
@@ -153,7 +153,7 @@ ContactManager.exe      # Windows
 
 ---
 
-## 🤖 AI Usage Declaration
+##  AI Usage Declaration
 
 > Transparency note: Using AI tools did not reduce any marks — this section is included as required.
 
@@ -178,7 +178,7 @@ When asked to implement merge sort on the linked list, the AI generated a versio
 
 ---
 
-## 📌 Notes
+##  Notes
 
 - Contact IDs are assigned automatically and **cannot be changed** after creation (`const int contact_id`).
 - Phone numbers must be exactly 11 digits and start with `010`, `011`, `012`, or `015`.
