@@ -1,7 +1,5 @@
 # Contact Manager System
 
-> A C++ console-based phonebook application built on a custom singly linked list, supporting full CRUD operations, multi-field search, merge sort, and strict input validation.
-
 ---
 
 ##  Group Members
